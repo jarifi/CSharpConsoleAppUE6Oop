@@ -11,6 +11,10 @@
             dog.MakeSound();
             dog.Swim();
 
+            Duck duck = new Duck { Name = "Donald", Age = 2 };
+            duck.MakeSound();
+            duck.Swim();
+
         }
     }
 }
