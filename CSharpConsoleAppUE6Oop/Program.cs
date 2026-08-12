@@ -1,4 +1,6 @@
-﻿namespace CSharpConsoleAppUE6Oop
+﻿using ConsoleAppue7;
+
+namespace CSharpConsoleAppUE6Oop
 {
     internal class Program
     {
@@ -14,6 +16,10 @@
             Duck duck = new Duck { Name = "Donald", Age = 2 };
             duck.MakeSound();
             duck.Swim();
+
+            Fish fish = new Fish { Name = "Nemo", Age = 1 };
+            fish.MakeSound();
+            fish.Swim();
 
         }
     }
