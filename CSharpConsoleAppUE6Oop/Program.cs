@@ -21,6 +21,11 @@ namespace CSharpConsoleAppUE6Oop
             fish.MakeSound();
             fish.Swim();
 
+            Eagle eagle = new Eagle { Name = "Zeus", Age = 3 };
+            eagle.MakeSound();
+            eagle.MakeJump();
+            eagle.Fly();
+
         }
     }
 }
