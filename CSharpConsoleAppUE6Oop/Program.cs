@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            
+            Animal a = new Cat { Name = "Garfield" , Age = 5 };
+            a.MakeSound();
+
         }
     }
 }
