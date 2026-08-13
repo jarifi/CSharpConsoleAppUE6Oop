@@ -15,7 +15,12 @@ namespace ConsoleAppue7
         {
             Console.WriteLine("Blub");
         }
-        
+
+        public void Rename(string newName)
+        {
+            Name = newName;
+        }
+
         public void Swim()
         {
             Console.WriteLine("The fish is swimming");

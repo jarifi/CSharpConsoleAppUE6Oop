@@ -13,6 +13,10 @@ namespace CSharpConsoleAppUE6Oop
             Console.WriteLine("Meow!");
         }
 
-
+        public void Rename(string newName)
+        {
+            Name = newName;
+        }
     }
 }
+
