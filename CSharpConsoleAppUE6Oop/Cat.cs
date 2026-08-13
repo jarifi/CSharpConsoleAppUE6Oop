@@ -13,6 +13,11 @@ namespace CSharpConsoleAppUE6Oop
             Console.WriteLine("Meow!");
         }
 
+        public void Rename(string newName)
+        {
+            Name = newName; // This will call the setter of the Name property in the base class, which includes validation.
+        }
+
 
     }
 }

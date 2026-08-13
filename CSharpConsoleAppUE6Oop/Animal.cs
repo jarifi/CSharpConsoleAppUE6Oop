@@ -14,7 +14,14 @@ namespace CSharpConsoleAppUE6Oop
         public string Name
         {
             get => _name;
-            protected set => _name = value;
+            protected set {
+
+                if (string.IsNullOrWhiteSpace(value) || value.Equals("Hitler"))
+                {
+                    throw new ArgumentException("Name cannot be null or whitespace.");
+                }
+                _name = value; 
+            }
         }
 
        public int Age
@@ -25,7 +32,7 @@ namespace CSharpConsoleAppUE6Oop
 
         public Animal(string name, int age)
         {
-            _name = name;
+            Name = name; // This will call the setter of the Name property, which includes validation.
             _age = age;
         }
 

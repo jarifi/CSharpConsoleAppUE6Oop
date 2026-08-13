@@ -31,7 +31,7 @@ namespace CSharpConsoleAppUE6Oop
         {
             throw new NotImplementedException();
         }
-
+        
         public void TakeOff()
         {
             throw new NotImplementedException();
@@ -45,6 +45,11 @@ namespace CSharpConsoleAppUE6Oop
         public void avoidCollision()
         {
             throw new NotImplementedException();
+        }
+
+        public void Rename(string newName)
+        {
+            Name = newName;
         }
     }
 }
