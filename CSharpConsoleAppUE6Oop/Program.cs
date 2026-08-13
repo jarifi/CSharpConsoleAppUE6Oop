@@ -6,25 +6,12 @@ namespace CSharpConsoleAppUE6Oop
     {
         static void Main(string[] args)
         {
-            Animal a = new Cat { Name = "Garfield" , Age = 5 };
-            a.MakeSound();
+            Animal animal1 = new Cat ("Garfield", 5);
+            Console.WriteLine(animal1.Name);
+            animal1.MakeSound();
+            animal1.MakeJump();
 
-            Dog dog = new Dog { Name = "Pluto", Age = 3 };
-            dog.MakeSound();
-            dog.Swim();
 
-            Duck duck = new Duck { Name = "Donald", Age = 2 };
-            duck.MakeSound();
-            duck.Swim();
-
-            Fish fish = new Fish { Name = "Nemo", Age = 1 };
-            fish.MakeSound();
-            fish.Swim();
-
-            Eagle eagle = new Eagle { Name = "Zeus", Age = 3 };
-            eagle.MakeSound();
-            eagle.MakeJump();
-            eagle.Fly();
 
         }
     }

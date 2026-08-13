@@ -6,6 +6,11 @@ namespace CSharpConsoleAppUE6Oop
 {
     internal class Eagle : Bird, IFlyable
     {
+        // Add a constructor that calls the base Bird constructor
+        public Eagle(string name, int age) : base(name, age)
+        {
+        }
+
         public int Altitude
         {
             get => throw new NotImplementedException();

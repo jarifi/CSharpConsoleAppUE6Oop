@@ -6,6 +6,10 @@ namespace CSharpConsoleAppUE6Oop
 {
     internal class Duck : Animal
     {
+        public Duck(string name, int age) : base(name, age)
+        {
+        }
+
         public override void MakeSound()
         {
             Console.WriteLine("Quack!");
@@ -15,6 +19,6 @@ namespace CSharpConsoleAppUE6Oop
         {
             Console.WriteLine($"{Name} is swimming.");
         }
-
     }
 }
+
