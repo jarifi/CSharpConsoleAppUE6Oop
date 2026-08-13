@@ -16,6 +16,7 @@ namespace ConsoleAppue7
             Console.WriteLine("Blub");
         }
 
+        // Method to rename the fish
         public void Rename(string newName)
         {
             Name = newName;
