@@ -18,6 +18,7 @@ namespace CSharpConsoleAppUE6Oop
         public void Rename(string newName)
         {
             Name = newName;
+
         }
 
         
