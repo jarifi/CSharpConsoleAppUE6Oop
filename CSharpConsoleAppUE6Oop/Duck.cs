@@ -19,6 +19,11 @@ namespace CSharpConsoleAppUE6Oop
         {
             Console.WriteLine($"{Name} is swimming.");
         }
+
+        public void Rename(string newName)
+        {
+            Name = newName;
+        }
     }
 }
 

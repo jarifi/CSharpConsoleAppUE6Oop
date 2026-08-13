@@ -19,7 +19,12 @@ namespace CSharpConsoleAppUE6Oop
         {
             Console.WriteLine("The dog is swimming slower.");
         }
-    
+
+        public string Rename(string newName)
+        {
+            Name = newName;
+            return Name;
+        }
 
     }
 }
