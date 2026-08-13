@@ -6,13 +6,12 @@ namespace CSharpConsoleAppUE6Oop
     {
         static void Main(string[] args)
         {
-            Animal animal1 = new Cat ("Garfield", 5);
-            Console.WriteLine(animal1.Name);
+            Cat animal1 = new Cat ("Garfield", 5);
+            Console.WriteLine("Name befor: "+ animal1.Name);
             animal1.MakeSound();
             animal1.MakeJump();
-
-
-
+            animal1.Rename("Tiger");
+            Console.WriteLine("Name after: " + animal1.Name);
         }
     }
 }
