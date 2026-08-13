@@ -15,6 +15,12 @@ namespace CSharpConsoleAppUE6Oop
             Console.WriteLine("Chrip!");
         }
 
+        public void Rename(string newName)
+        {
+            Name = newName;
+
+        }
+
         
     }
 }
