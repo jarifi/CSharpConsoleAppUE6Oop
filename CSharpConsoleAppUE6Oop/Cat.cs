@@ -15,9 +15,8 @@ namespace CSharpConsoleAppUE6Oop
 
         public void Rename(string newName)
         {
-            Name = newName; // This will call the setter of the Name property in the base class, which includes validation.
+            Name = newName;
         }
-
-
     }
 }
+
