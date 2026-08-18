@@ -10,6 +10,7 @@ namespace CSharpConsoleAppUE6Oop
             base(brand, productionState, model, yearOfManifacture)
         {
 
+
         }
     }
 }
