@@ -13,5 +13,14 @@ namespace CSharpConsoleAppUE6Oop
         Skoda,
         Honda,
         Kawasaki,
+        Mercedes,
+        Volvo,
+        WhiteStarLine,
+        Trek,
+        Giant,
+        Siemens,
+        Boeing
+
+
     }
 }

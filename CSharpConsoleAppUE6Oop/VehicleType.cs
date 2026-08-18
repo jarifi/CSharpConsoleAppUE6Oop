@@ -7,6 +7,13 @@ namespace CSharpConsoleAppUE6Oop
     internal enum VehicleType
     {
         Car,
-        Motorcycle
+        Motorcycle,
+        Bus,
+        Truck,
+        Ship,
+        Bicycle,
+        Train,
+        Airplane,
+        Tram
     }
 }
