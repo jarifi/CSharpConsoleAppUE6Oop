@@ -6,11 +6,17 @@ namespace CSharpConsoleAppUE6Oop
 {
     internal abstract class Vehicle
     {
-        public CarBrand CarBrand { get; set; }
-        public MotorcycleBrand MotorcycleBrand { get; set; }
+        public Brand Brand { get; set; }
         public ProductionState ProductionState { get; set; }
         public string Model { get; set; } = string.Empty;
         public DateOnly YearOfManifacture { get; set; }
-     
+
+        public Vehicle(Brand brand, ProductionState productionState, string model, DateOnly yearOfManifacture)
+        {
+            Brand = brand;
+            ProductionState = productionState;
+            Model = model;
+            YearOfManifacture = yearOfManifacture;
+        }
     }
 }

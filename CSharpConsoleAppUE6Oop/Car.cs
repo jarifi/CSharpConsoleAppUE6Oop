@@ -4,12 +4,13 @@ using System.Text;
 
 namespace CSharpConsoleAppUE6Oop
 {
-    internal class Car
+    internal class Car: Vehicle     
     {
-        public Brand Brand { get; set; }
-        public ProductionState ProductionState { get; set; }
-        public string Model { get; set; } = string.Empty;
-        public DateOnly YearOfManifacture { get; set; }
-     
+        public Car(Brand brand, ProductionState productionState, string model, DateOnly yearOfManifacture) :
+            base(brand, productionState, model, yearOfManifacture)
+        {
+
+        }
+
     }
 }

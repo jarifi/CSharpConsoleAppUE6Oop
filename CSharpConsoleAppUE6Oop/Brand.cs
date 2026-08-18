@@ -4,22 +4,14 @@ using System.Text;
 
 namespace CSharpConsoleAppUE6Oop
 {
-    internal enum CarBrand
+    internal enum Brand
     {
         Suzuki,
         Toyota,
         VW,
         BMW,
         Skoda,
-        
-    }
-
-    internal enum MotorcycleBrand
-    {
-        Saikel,
-        Yamaha,
+        Honda,
         Kawasaki,
-        Ducati,
-        HarleyDavidson
     }
 }
