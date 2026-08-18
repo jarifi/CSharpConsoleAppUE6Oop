@@ -6,13 +6,13 @@ namespace CSharpConsoleAppUE6Oop
 {
     internal class VehicleFactory
     {
-        public static Vehicle CreateVehicle(string vehicleType, Brand brand, ProductionState productionState, string model, DateOnly yearOfManufacture)
+        public static Vehicle CreateVehicle(VehicleType vehicleType, Brand brand, ProductionState productionState, string model, DateOnly yearOfManufacture)
         {
-            switch (vehicleType.ToLower())
+            switch (vehicleType)
             {
-                case "car":
+                case VehicleType.Car:
                     return new Car(brand, productionState, model, yearOfManufacture);
-                case "motorcycle":
+                case VehicleType.Motorcycle:
                     return new Motorcycle(brand, productionState, model, yearOfManufacture);
                 default:
                     throw new ArgumentException($"Invalid vehicle type: {vehicleType}");
