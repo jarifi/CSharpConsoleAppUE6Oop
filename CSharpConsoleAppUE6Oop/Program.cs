@@ -35,7 +35,6 @@ namespace CSharpConsoleAppUE6Oop
             Console.WriteLine(train.Brand);
             Console.WriteLine(train.Model);
 
-
             Airplane airplane = (Airplane)VehicleFactory.CreateVehicle(VehicleType.Airplane, Brand.Boeing, ProductionState.InProduction, "747", new DateOnly(2020, 1, 1));
             Console.WriteLine(airplane.Brand);
             Console.WriteLine(airplane.Model);
