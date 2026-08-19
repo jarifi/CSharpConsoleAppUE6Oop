@@ -1,6 +1,15 @@
 ﻿using CSharpConsoleAppUE6Oop;
 
 List<Vehicle> vehicles = new List<Vehicle>();
+List<Vehicle> soldVehicles = new List<Vehicle>();
+
+
+List<Person> persons = new List<Person>();
+
+persons.Add(new Employee("John", "Doe", "john.doe@example.com", "123-456-7890", new DateOnly(1990, 1, 1), 1234, "Seller", 2500));
+persons.Add(new Customer("Johan", "Doe", "johana.doe@example.com", "123-456-7891", new DateOnly(1990, 1, 1), 1234, 0));
+
+
 
 Car car = (Car)VehicleFactory.CreateVehicle(
     VehicleType.Car, Brand.Toyota, ProductionState.InProduction,
@@ -47,15 +56,60 @@ Tram tram = (Tram)VehicleFactory.CreateVehicle(
     "Siemens", new DateOnly(2020, 1, 1));
 vehicles.Add(tram);
 
-int vehicleIndex = 1;
-Console.WriteLine("--- Lagerstand ---");
+int vehicleIndex = 0;
+Console.WriteLine("--- Lagerstand vorher ---");
+
+Console.WriteLine("| Position | Brand| Model| Production Year| Production State|");
 foreach (var vehicle in vehicles)
 {
     Console.WriteLine
         (
-        $"\n {vehicleIndex++} | Brand: " + vehicle.Brand 
-        + ", Model: " + vehicle.Model 
-        + ", Production Year: " + vehicle.YearOfManifacture 
-        + ", Production State: " + vehicle.ProductionState
+        $"\n {++vehicleIndex} " + vehicle.Brand 
+        + "," + vehicle.Model 
+        + ", " + vehicle.YearOfManifacture 
+        + ", " + vehicle.ProductionState
         );
 }
+
+
+// Verkauf von Fahrzeugen
+Vehicle vehicleToSell = vehicles.FirstOrDefault(v => v.Brand == Brand.Toyota && v.Model == "Camry");
+if (vehicleToSell != null)
+{
+    vehicles.Remove(vehicleToSell);
+    soldVehicles.Add(vehicleToSell);
+}
+
+
+vehicleIndex = 0;
+Console.WriteLine("--- Lagerstand nachher ---");
+
+Console.WriteLine("| Position | Brand| Model| Production Year| Production State|");
+foreach (var vehicle in vehicles)
+{
+    Console.WriteLine
+        (
+        $"\n {++vehicleIndex} " + vehicle.Brand
+        + "," + vehicle.Model
+        + ", " + vehicle.YearOfManifacture
+        + ", " + vehicle.ProductionState
+        );
+}
+
+
+vehicleIndex = 0;
+Console.WriteLine("--- Lagerstand der verkauften Fahrzeuge ---");
+
+Console.WriteLine("| Position | Brand| Model| Production Year| Production State|");
+foreach (var vehicle in soldVehicles)
+{
+    Console.WriteLine
+        (
+        $"\n {++vehicleIndex} " + vehicle.Brand
+        + "," + vehicle.Model
+        + ", " + vehicle.YearOfManifacture
+        + ", " + vehicle.ProductionState
+        );
+}
+
+

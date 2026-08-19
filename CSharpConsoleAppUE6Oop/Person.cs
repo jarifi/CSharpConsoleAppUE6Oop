@@ -30,3 +30,4 @@ namespace CSharpConsoleAppUE6Oop
             return $"{FullName} ({Email})";
         }
     }
+}
