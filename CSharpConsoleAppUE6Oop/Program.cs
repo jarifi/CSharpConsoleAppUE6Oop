@@ -47,10 +47,15 @@ Tram tram = (Tram)VehicleFactory.CreateVehicle(
     "Siemens", new DateOnly(2020, 1, 1));
 vehicles.Add(tram);
 
-
-// Get the last vehicle
-Vehicle lastVehicle = vehicles.Last();
-
-Console.WriteLine("Last vehicle:");
-Console.WriteLine($"Brand: {lastVehicle.Brand}");
-Console.WriteLine($"Model: {lastVehicle.Model}");
+int vehicleIndex = 1;
+Console.WriteLine("--- Lagerstand ---");
+foreach (var vehicle in vehicles)
+{
+    Console.WriteLine
+        (
+        $"\n {vehicleIndex++} | Brand: " + vehicle.Brand 
+        + ", Model: " + vehicle.Model 
+        + ", Production Year: " + vehicle.YearOfManifacture 
+        + ", Production State: " + vehicle.ProductionState
+        );
+}
